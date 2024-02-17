@@ -15,6 +15,7 @@ class AuthService {
     if(user.length === 0) {
         db.data.users.push({id: db.data.users.length ,...data})
         await db.write()
+        console.log(db.data.users)
         res.status(201).json();
     }
     else{
