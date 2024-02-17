@@ -10,6 +10,10 @@ class UserService {
         res.json(...user)
     }
 
+    getUsers(res) {
+        res.json(db.data.users)
+    }
+
     async updateUser (id, data, res) {
         const user =  this.findUserById(id)[0];
         const updatedUser = Object.assign(user, data)
